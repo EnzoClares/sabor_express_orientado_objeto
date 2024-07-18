@@ -1,23 +1,14 @@
 class restaurante:
-  nome = ''
-  categoria = ''
-  ativo = True
+  def __init__(self, nome, categoria):
+      self.nome = nome
+      self.categoria = categoria
+      self.ativo = False
 
-restaurante_praça = restaurante()
-restaurante_praça.nome = 'praça'
-restaurante_praça.categoria = 'italiano'
-restaurante_pizza = restaurante()
+restaurante_praça = restaurante('Praça', 'Comida italiana')
+
+restaurante_pizza = restaurante('Pizza express', 'Comida italiana')
 
 restaurantes = [restaurante_praça, restaurante_pizza]
 
 print(vars(restaurante_praça))
-
-if restaurante_praça.ativo:
-  print('restaurante ativo')
-else:
-  print('restaurante inativo')
-
-categoria_praça = restaurante_praça.categoria
-print(categoria_praça)
-restaurante_praça.nome = 'Bistrô'
-print(restaurante_praça.nome)
+print(vars(restaurante_pizza))
