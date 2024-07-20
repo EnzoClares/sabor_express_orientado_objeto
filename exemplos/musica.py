@@ -14,4 +14,3 @@ class Musica:
 
 musica1 = Musica(nome='levanta e anda', artista='emicida', duracao=180)
 
-
