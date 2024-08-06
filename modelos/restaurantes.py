@@ -20,9 +20,13 @@ class Restaurante:
     @property
     def ativo(self):
         return '✅' if self._ativo else '❌'
+    
+    def alternar_estado(self):
+        self._ativo = not self._ativo
 
 
 restaurante_pizza = Restaurante('Pizza suprema', 'comida italiana')
+restaurante_pizza.alternar_estado()
 restaurante_japones = Restaurante('sushi loko', 'comida japonesa')
 
 Restaurante.listar_restaurantes()
