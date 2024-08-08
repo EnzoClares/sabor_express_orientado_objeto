@@ -1,9 +1,12 @@
+from modelos.avaliacoes import Avaliacoes
+
 class Restaurante:
     restaurantes = []
     def __init__(self, nome='', categoria=''):
         self._nome = nome.title()
         self._categoria = categoria
         self._ativo = False
+        self._avaliacoes = []
         Restaurante.restaurantes.append(self)
         '''serve para colocar dentro da [] restaurantes e guardar essas informações'''
     
@@ -23,3 +26,7 @@ class Restaurante:
     
     def alternar_estado(self):
         self._ativo = not self._ativo
+
+    def receber_avaliacao(self, cliente, nota):
+        avaliacao = Avaliacoes(cliente, nota)
+        self._avaliacoes.append(avaliacao)
