@@ -1,4 +1,4 @@
-from modelos.avaliacoes import Avaliacoes
+from modelos.avaliacao import Avaliacao
 
 class Restaurante:
     restaurantes = []
@@ -6,7 +6,7 @@ class Restaurante:
         self._nome = nome.title()
         self._categoria = categoria
         self._ativo = False
-        self._avaliacoes = []
+        self._avaliacao= []
         Restaurante.restaurantes.append(self)
         '''serve para colocar dentro da [] restaurantes e guardar essas informações'''
     
@@ -27,6 +27,17 @@ class Restaurante:
     def alternar_estado(self):
         self._ativo = not self._ativo
 
+   
     def receber_avaliacao(self, cliente, nota):
-        avaliacao = Avaliacoes(cliente, nota)
-        self._avaliacoes.append(avaliacao)
+        avaliacao = Avaliacao(cliente, nota)
+        self._avaliacao.append(avaliacao)
+    @property #tornar capaz de ler cada avaliação
+    def media_das_avaliacoes(self):
+        if not self._avaliacao:
+            return 0
+        soma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)
+        quatidade_de_notas = len(self._avaliacao)
+        media_das_notas = round(soma_das_notas/quatidade_de_notas, 1)
+        return media_das_notas
+
+#uso de round = arredondamento e sum = soma de valores
