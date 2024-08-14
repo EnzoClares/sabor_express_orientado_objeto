@@ -34,10 +34,10 @@ class Restaurante:
     @property #tornar capaz de ler cada avaliação
     def media_das_avaliacoes(self):
         if not self._avaliacao:
-            return 0
+            return '-'
         soma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)
         quatidade_de_notas = len(self._avaliacao)
-        media_das_notas = round(soma_das_notas/quatidade_de_notas, 1)
+        media_das_notas = round((soma_das_notas/quatidade_de_notas)/2, 1)
         return media_das_notas
 
 #uso de round = arredondamento e sum = soma de valores
