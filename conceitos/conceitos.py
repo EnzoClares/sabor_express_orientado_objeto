@@ -6,3 +6,5 @@
 #método = função criada dentro da classe
 #self = usado para acessar variáveis que pertencem a classe, colocado em algo que precisa ser acessado em toda a classe 
 #método de instância = mesmo que método
+#herança:
+#uso do super(), para acessar os metodos e atributos de outra class
