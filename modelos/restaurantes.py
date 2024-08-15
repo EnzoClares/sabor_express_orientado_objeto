@@ -1,4 +1,5 @@
 from modelos.avaliacao import Avaliacao
+from modelos.cardapio.item import ItemCardapio
 
 class Restaurante:
     restaurantes = []
@@ -41,7 +42,6 @@ class Restaurante:
         media_das_notas = round((soma_das_notas/quatidade_de_notas)/2, 1)
         return media_das_notas
 #uso de round = arredondamento e sum = soma de valores
-    def adicionar_bebida_ao_cardapio(self, bebida):
-        self._cardapio.append(bebida)
-    def adicionar_prato_ao_cardapio(self, prato):
-        self._cardapio.append(prato)
+    def adicionar_no_cardapio(self, item):
+        if isinstance(item, ItemCardapio):
+            self._cardapio.append(item)
