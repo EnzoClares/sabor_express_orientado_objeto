@@ -8,3 +8,7 @@
 #método de instância = mesmo que método
 #herança:
 #uso do super(), para acessar os metodos e atributos de outra class
+#uso de isinstance() para verificar se é ou não uma instancia 
+#uso de enumerate() para informar que é uma sequência
+#uso de property vem para informar que o metodo é usado somente para exibição
+#uso de hasattr() para informar atributo
