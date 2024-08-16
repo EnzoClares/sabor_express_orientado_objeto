@@ -12,3 +12,5 @@
 #uso de enumerate() para informar que é uma sequência
 #uso de property vem para informar que o metodo é usado somente para exibição
 #uso de hasattr() para informar atributo
+#classes abstratas
+#polimorfismo = pegar um metodo e molda-lo de formas diferentes e em diferentes classes
